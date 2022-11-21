@@ -49,7 +49,7 @@ function App() {
                     )}
                 </div>
                 <div className="footer">
-                    <textarea value={message} onChange={changeMessage}/>
+                    <textarea className="textArea" value={message} onChange={changeMessage}/>
                     <button onClick={sendMessage}>SEND MESSAGE</button>
                 </div>
             </div>
