@@ -1,6 +1,6 @@
 .app {
     text-align: center;
-    width: 500px;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -9,15 +9,10 @@
     flex-direction: column;
     align-items: start;
     border: 2px solid #dedede;
-    background-color: #a29696;
+    background-color: #7aa0e3;
     border-radius: 5px;
     padding: 10px;
     margin: 10px 0;
-}
-.chat::after {
-    content: "";
-    clear: both;
-    display: table;
 }
 
 .messages {
@@ -25,26 +20,126 @@
     overflow-y: auto;
     width: 100%;
 }
-
-.message img {
-    max-width: 40px;
-    width: 100%;
-    margin-right: 20px;
-    border-radius: 50%;
+.messageSubscriber {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 15px;
 }
+.messageMy{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin: 15px;
+}
+.messageBlockFriend{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+}
+.messageBlockMy{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+}
+.messageBlockFriend img {
+    width: 40px;
+    height: 40px;
+    margin-right: 0;
+    border-radius: 20px;
 
-.message {
+}
+.messageBlockMy img {
+    width: 40px;
+    height: 40px;
+    margin-right: 0;
+    border-radius: 20px;
+
+}
+.messageText{
+    min-width: 350px;
+    max-width: 600px;
+    word-wrap: break-word;
     color: black;
 }
+.name{
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+}
+.textFriend {
+    position: relative;
+    background-color: rgba(132, 169, 37, 0.44);
+    color: white;
+    border-radius: 10px 10px 10px 0;
+    height: 30px;
+}
+.textMy{
+    position: relative;
+    background-color: rgba(132, 169, 37, 0.44);
+    color: white;
+    border-radius: 10px 10px 0 10px;
+    height: 30px;
+}
+
+.textFriend:after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle at 0 0 , rgba(0, 0, 0, 0) 20px, rgba(132, 169, 37, 0.44) 20px);
+    left: -20px;
+    top: 10px;
+}
+.textMy:after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle at 20px 0 , rgba(0, 0, 0, 0) 20px, rgba(132, 169, 37, 0.44) 20px);
+    right: -20px;
+    top: 10px;
+}
 .footer{
+    width: 100%;
     margin-top: 30px;
 }
 .textArea{
-    width: 450px;
+    position: relative;
+    border-radius: 10px;
+    background-color: #F5F7FB;
+    border: white;
+    min-height: 30px;
+    box-shadow: 0 5px 20px rgba(29, 33, 38, 0.03), 0 1px 2px rgba(29, 33, 38, 0.1);
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 12.5px;
+    width: 90%;
+}
+button{
+    position: absolute;
+    background-color: #0059b3;
+    border-radius: 10px;
     outline: none;
-    border: #dedede;
-    background-color: blanchedalmond;
-    font-size: 20px;
-    height: 50px;
-    margin: 0 auto;
+    border: #0059b3;
+    width: 50px;
+    min-height: 30px;
+    color: white;
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    cursor: pointer;
+    right: 110px;
+    bottom: 30px
+}
+button:hover{
+    background-color: #2db300;
 }

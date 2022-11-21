@@ -43,14 +43,20 @@ function App() {
             <div className="chat">
                 <div className="messages" ref={messagesBlockRef}>
                     {users.map((user, index) =>
-                        <div key={index} className="message">
-                            <img src={user.photo}/> <b>{user.userName}: </b><span>{user.message}</span>
+                        <div key={index} className={user.userId !== 25436 ? "messageSubscriber" : "messageMy"}>
+                            <div className={user.userId !== 25436 ? "messageBlockFriend" : "messageBlockMy"}>
+                                <img src={user.photo}/>
+                                <div className="messageText">
+                                    <div className="name">{user.userName}</div>
+                                    <pre className={user.userId !== 25436 ? "textFriend" : "textMy"}>{user.message}</pre>
+                                </div><span></span>
+                            </div>
                         </div>
                     )}
                 </div>
                 <div className="footer">
                     <textarea className="textArea" value={message} onChange={changeMessage}/>
-                    <button onClick={sendMessage}>SEND MESSAGE</button>
+                    <button onClick={sendMessage}>SEND</button>
                 </div>
             </div>
         </div>
