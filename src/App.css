@@ -1,5 +1,14 @@
-.chat {
+.app {
   text-align: center;
+  width: 500px;
+  margin: 0 auto;
+}
+.chat{
+
+}
+.messages{
+  height: 400px;
+  overflow-y: auto;
 }
 .message img{
   width: 30px;
